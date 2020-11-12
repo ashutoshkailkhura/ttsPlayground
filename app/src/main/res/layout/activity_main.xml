@@ -6,36 +6,24 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/dummy_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="I am trying to speak out large amount of text using Android Text To Speech. I using default Google speech engine. Below is my code."
-        app:layout_constraintBottom_toBottomOf="parent"
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.16000003" />
+        app:layout_constraintVertical_bias="0.52">
 
-    <TextView
-        android:id="@+id/dummy_text_hindi"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="डिजिटल दन
-ुिया में उन्नति को ध्यान में रखते हु
+        <TextView
+            android:id="@+id/dummy_text"
+            android:layout_width="wrap_content"
+            android:padding="16dp"
+            android:layout_margin="6dp"
+            android:layout_height="wrap_content"
+            tools:text="I am trying to speak out large amount of text using Android Text To Speech. I using default Google speech engine. Below is my code." />
 
-ए, शिक्षकों को शिक्षण और सीखने के लिए आई.सी.
-
-टी.का उपयोग करने के लिए आवश्यक पेशेवर क्षमतायक्त कर
-
-ु ने की आवश्यकता है। शिक्षण अधिगम में
-आई.सी.टी. एकीकरण का अर्थ के वल इटरं नेट और डिजिटल उपकरणों का उपयोग नहीं है, बल्कि इन
-उद्शदे्यों और लक्ष्यों को प्राप्त करने के लिए, सीखने के लिए और सीखने के परिणामों को प्राप्त करने के
-साधन के रूप में उपयोग करना है।"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dummy_text" />
+    </ScrollView>
 
     <Button
         android:id="@+id/button"

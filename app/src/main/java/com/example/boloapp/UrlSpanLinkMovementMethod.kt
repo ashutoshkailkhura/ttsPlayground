@@ -20,7 +20,7 @@ abstract class UrlSpanLinkMovementMethod : LinkMovementMethod() {
             y -= widget.totalPaddingTop
             x += widget.scrollX
             y += widget.scrollY
-            val layout = widget.layout as Layout?
+            val layout = widget.layout
             if (layout != null) {
                 val line = layout.getLineForVertical(y)
                 val off = layout.getOffsetForHorizontal(line, x.toFloat())
@@ -29,7 +29,7 @@ abstract class UrlSpanLinkMovementMethod : LinkMovementMethod() {
                     val link = links[0]
                     if (action == MotionEvent.ACTION_UP) {
                         if (link is URLSpan) {
-                            val url = link.url as String?
+                            val url = link.url
                             onLinkClicked(url)
                             return true
                         }
